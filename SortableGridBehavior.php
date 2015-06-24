@@ -1,36 +1,13 @@
 <?php
-/**
- * @link https://github.com/himiklab/yii2-sortable-grid-view-widget
- * @copyright Copyright (c) 2014 HimikLab
- * @license http://opensource.org/licenses/MIT MIT
- */
 
-namespace himiklab\sortablegrid;
+
+namespace esoftkz\sortablegrid;
 
 use yii\base\Behavior;
 use yii\base\InvalidConfigException;
 use yii\db\ActiveRecord;
 
-/**
- * Behavior for sortable Yii2 GridView widget.
- *
- * For example:
- *
- * ```php
- * public function behaviors()
- * {
- *    return [
- *       'sort' => [
- *           'class' => SortableGridBehavior::className(),
- *           'sortableAttribute' => 'sortOrder'
- *       ],
- *   ];
- * }
- * ```
- *
- * @author HimikLab
- * @package himiklab\sortablegrid
- */
+
 class SortableGridBehavior extends Behavior
 {
     /** @var string database field name for row sorting */
