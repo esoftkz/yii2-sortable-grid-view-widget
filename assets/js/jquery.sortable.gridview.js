@@ -17,7 +17,10 @@
         });
 
         grid.sortable({
-            items: 'tr',
+            handle: ".sortable_icon",
+			cursor: "move",
+			tolerance: "pointer",
+			items: 'tr',
 			start: function(event, ui){  				
 			    ui.item.addClass('sortable_item');
 			},
