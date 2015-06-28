@@ -10,6 +10,7 @@ class SortableGridAsset extends AssetBundle
 
     public $js = [
         'js/jquery.sortable.gridview.js',
+		'js/jquery.status.gridview.js',
     ];
 
     public $depends = [

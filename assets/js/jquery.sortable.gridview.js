@@ -17,7 +17,7 @@
         });
 
         grid.sortable({
-            handle: ".sortable_icon",
+			handle: ".sortable_icon",
 			cursor: "move",
 			tolerance: "pointer",
 			items: 'tr',
@@ -56,4 +56,9 @@
             helper: fixHelper
         }).disableSelection();
     };
+	
+	
+	
 })(jQuery);
+
+
