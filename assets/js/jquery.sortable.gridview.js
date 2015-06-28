@@ -1,7 +1,7 @@
 (function ($) {
     var fixHelper = function (e, ui) {
         ui.children().each(function () {
-            $(this).width($(this).width());
+            $(this).width($(this).width());			
         });
 		
         return ui;
@@ -21,11 +21,23 @@
 			cursor: "move",
 			tolerance: "pointer",
 			items: 'tr',
-			start: function(event, ui){  				
-			    ui.item.addClass('sortable_item');
+			axis: "y",								
+			scroll:true,
+			
+			start: function(event, ui){ 				
+			    ui.item.addClass('sortable_item');	
+				
+			},
+			sort: function(event, ui) {                 
+				var $target = $(event.target);
+				if (!/html|body/i.test($target.offsetParent()[0].tagName)) {
+					var top = event.pageY - $target.offsetParent().offset().top - (ui.helper.outerHeight(true) / 2);
+					ui.helper.css({'top' : top + 'px'});
+				}
+				
 			},
 			stop: function(event, ui){ 
-				 ui.item.removeClass('sortable_item');		
+				ui.item.removeClass('sortable_item');		
 			},
 			placeholder: 'placeholder',
             update: function () {
