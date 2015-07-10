@@ -15,5 +15,6 @@ class SortableGridAsset extends AssetBundle
 
     public $depends = [
         'yii\jui\JuiAsset',
+		'yii\grid\GridViewAsset'
     ];
 }
